@@ -1,0 +1,6 @@
+<p>
+    <a  [routerLink]="['/playerStatus/game1']">Game 1</a>
+    <a  [routerLink]="['/playerStatus/game2']">Game 2</a>
+    <a  [routerLink]="['/playerStatus/game3']">Game 3</a>
+  <router-outlet #child (event)="refreshChildList()"></router-outlet>
+</p>

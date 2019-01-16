@@ -1,0 +1,11 @@
+<form (submit)='submit()' #myform='ngForm'>
+  <label for="playerName">Player Name</label>
+  <input type="text" name="playerName" [(ngModel)]="player.name" #name="ngModel" required minlength="2">
+  <span *ngIf="name.errors && name.dirty">Invalid Name</span>
+  <br>
+  <label for="prefPosition">Preferred Position</label>
+  <input type="text" name="prefPosition" [(ngModel)]="player.prefPosition" #pos="ngModel" required minlength="2">
+  <span *ngIf="pos.errors && pos.dirty">Invalid Name</span>
+  <br>
+  <input type="submit" value="Add">
+</form>
